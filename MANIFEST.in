@@ -1,0 +1,4 @@
+include config/*.json
+include config/*.sh
+include data/videos/*.mp4
+include doc/*

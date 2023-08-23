@@ -1,0 +1,8 @@
+multiprocess==0.70.15
+numpy==1.23.5
+opencv_python==4.5.5.62
+Pillow==10.0.0
+pytesseract==0.3.10
+scipy==1.6.0
+setuptools==68.1.2
+scikit-image==0.18.1

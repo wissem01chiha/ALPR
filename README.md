@@ -110,33 +110,6 @@ run  the main.py script
 
 
 #### Package Architecture
-The code tree is as follow :  
-cil4sys      
-├───build  
-│   ├───bdist.win-amd64   
-│   └───lib  
-│       ├───countour  
-│       ├───enhance  
-│       ├───metric  
-│       ├───threshold  
-│       ├───transform  
-│       └───video  
-├───cil4sys.egg-info  
-├───config  
-├───countour  
-├───data  
-│   ├───images  
-│   │   ├───arr_cnts  
-│   │   ├───roi_frames  
-│   │   └───video_frames  
-│   └───videos  
-├───dist  
-├───doc  
-├───enhance  
-├───metric  
-├───threshold  
-├───transform  
-└───video  
 ### Contributing 
 ### License
 this is under 

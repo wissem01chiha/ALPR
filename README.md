@@ -9,7 +9,6 @@
 
 
 
-
 ### Table of Contents
 
 - [LPDR Embedded Software](#project-name)
@@ -40,7 +39,7 @@ Tunisian license plate numbers. However, it's important to note that the current
 
 ###  Installation
 
-#### installation on raspberry pi Boerod 
+#### installation on Raspberry pi Board 
 
 Update package information and upgrade installed packages
 
@@ -59,22 +58,24 @@ clone to the repository
 
     git clone https://github.com/wissem01chiha/cil4sys
 
-Navigate to the repository's dist folder and run 
+Navigate to the repository  folder and run 
 
     pip3  install ./dist/cil4sys-0.1.tar.gz
 
 This will install the application with it dependencies and data files.  
 
-Verify the installation 
+To check that all software modules are installed : 
 
-    cil4sys --version
+
 
 
 ### Usage
 
 connect your camera to raspberry pi board throgh the USB port or the default raspi port , only one camera wich is ste to default will be detected  for the raspi kit camera you miust enable the camera interface 
 
-after installation 
+after installation navigate to the main script diractory folder and run 
+
+    python main.py 
  
 ### Documentation 
 
@@ -84,8 +85,9 @@ after installation
 
 
 ### Contributing 
+
 ### License
-this is under 
+This project is actually under The GNU licence,   
 ### Contact
 chihawissem08@gmail.com  
 

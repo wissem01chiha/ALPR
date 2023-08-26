@@ -7,6 +7,7 @@ cil4sys.egg-info/SOURCES.txt
 cil4sys.egg-info/dependency_links.txt
 cil4sys.egg-info/requires.txt
 cil4sys.egg-info/top_level.txt
+config/__init__.py
 config/path.json
 config/raspi.sh
 config/spec.json
@@ -16,7 +17,9 @@ countour/countour_select.py
 countour/crop_roi.py
 countour/find_chars.py
 countour/rectangle_detection.py
+data/__init__.py
 data/videos/vid00.mp4
+doc/cil4sys_logo.png
 doc/raspberry-pi-3-b+.pdf
 doc/wiring.png
 enhance/__init__.py

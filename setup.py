@@ -13,6 +13,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/wissem01chiha/cil4sys",
     packages=setuptools.find_packages(),
+    package_data={'config': ['*.json','*.sh'],'data':['videos/*.mp4']},
     py_modules=["main"],
     install_requires=[
         "multiprocess==0.70.15",

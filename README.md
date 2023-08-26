@@ -8,8 +8,7 @@
 ![Raspberrypi](https://img.shields.io/badge/Raspberry%20Pi-A22846?style=for-the-badge&logo=Raspberry%20Pi&logoColor=white)
 
 
-![licence](https://img.shields.io/github/license/{wissem01chiha}/{cil4sys}.svg)
-![](https://img.shields.io/github/watchers/{username}/{repo-name}.svg)
+
 
 ### Table of Contents
 

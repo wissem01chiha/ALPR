@@ -1,7 +1,15 @@
 ##  Car Licencing Plate Detection and Recognition  Embedded Software for Intelligent Parking Systems.
 
+![OpenCV](https://img.shields.io/badge/opencv-%23white.svg?style=for-the-badge&logo=opencv&logoColor=white)
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![Shell Script](https://img.shields.io/badge/shell_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white) 
+![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)
+![SciPy](https://img.shields.io/badge/SciPy-%230C55A5.svg?style=for-the-badge&logo=scipy&logoColor=%white)
+![Raspberrypi](https://img.shields.io/badge/Raspberry%20Pi-A22846?style=for-the-badge&logo=Raspberry%20Pi&logoColor=white)
 
 
+![licence](https://img.shields.io/github/license/{wissem01chiha}/{cil4sys}.svg)
+![](https://img.shields.io/github/watchers/{username}/{repo-name}.svg)
 
 ### Table of Contents
 
@@ -32,6 +40,8 @@ Tunisian license plate numbers. However, it's important to note that the current
 
 
 ###  Installation
+
+#### installation on raspberry pi Boerod 
 
 Update package information and upgrade installed packages
 
@@ -69,18 +79,20 @@ after installation
  
 ### Documentation 
 
-<img src="doc/wiring.png" alt="Local Image" width="350" height="350">
+<img src="doc/wiring.png" alt="Local Image" width="350" height="400">
 
-
+ 
 
 
 ### Contributing 
 ### License
 this is under 
 ### Contact
+chihawissem08@gmail.com  
+
 ### Acknowledgments
 
-
+<img src="doc/cil4sys_logo.png" alt="Local Image" width="150" height="100">
 
 
 

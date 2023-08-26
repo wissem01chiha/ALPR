@@ -9,7 +9,6 @@
   - [Table of Contents](#table-of-contents)
   - [Description](#description)
   - [Features](#features)
-  - [Build](#Build)
   - [Installation][installation]
   - [Usage](#usage)
   - [Documentation](#documentation)
@@ -45,7 +44,6 @@ Upgrade Python packages: pip, setuptools, and wheel
 
 Install library dependencies 
 
-    sudo apt install libatlas-base-dev gfortran
     sudo apt install python3-opencv libopencv-dev
 
 clone to the repository 
@@ -62,54 +60,20 @@ Verify the installation
 
     cil4sys --version
 
-### Build   
-Standlone compiled binaries are can be found at dist folder , for raspberry pi  platform 
-
-Install pyinstller on rasberry pi 
-
-    sudo pip3 install pyinstaller  
-
-Install the code package with commands in  [Installation][installation]
-
-run   
-
-    pyinstaller main.py
 
 ### Usage
-The application provide 
-run  the main.py script 
+
+connect your camera to raspberry pi board throgh the USB port or the default raspi port , only one camera wich is ste to default will be detected  for the raspi kit camera you miust enable the camera interface 
+
+after installation 
+ 
 ### Documentation 
 
-![Local Image](doc/wiring.png)
+<img src="doc/wiring.png" alt="Local Image" width="350" height="350">
 
 
-1. Start
-2. Record video 
-3. Split and Sample video frames. 
-4. Detect motioned regions.
-5. Crop regions of intrest.
-6. Enhance ROI Contrast. 
-7. Sort images:
-    - Proportion of white and black color
-8. Filtre result images:  
-    - SSIM index      : remove similar regions images
-    - Estimate noise  : using DCT transform  
-    - SNR index       : select best noisless images
-9. Adjust images saturation
-    - HSI transform 
-10. Image segmentation (thresholding)
-11. Find Countours.
-12. Select Countours By: 
-      - Char size
-      - Arrangement
-13. Rotate Plate Images
-14. Extract numbers with OCR
-15. Get possible LP numbers with fazzy logic 
-    algorithm (not fully implemented)
-16. end 
 
 
-#### Package Architecture
 ### Contributing 
 ### License
 this is under 

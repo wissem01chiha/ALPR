@@ -33,6 +33,7 @@ transform/__init__.py
 transform/adjust_sat.py
 transform/hsi.py
 utils/__init__.py
+utils/lcd.py
 utils/matching_number.py
 video/__init__.py
 video/capture_video.py

@@ -1,28 +1,21 @@
-import 		cv2
-from 		PIL 	  import 	Image
-from 		skimage.filters import threshold_otsu
-
 """
-    motion_detection.py
+	motion_detection.py
 
     A more detailed explanation of what the function does and why it's used.
 
     Args:
-        background 		(numpy array): Description of the parameter.
-		frame	   		(numpy array):
-		min_cnt_area 	(float)		:
-		max_cnt_area	(float) 	:
+        background 		(numpy array)	: 
+		frame	   		(numpy array)	:
+		min_cnt_area 	(float)			:
+		max_cnt_area	(float) 		:
             
     Returns:
-        (Numpy Array) : frame.
-            
-    Raises:
-        ExceptionType: Description of when and why this exception might be raised.
-            Additional details about the possible exceptions if necessary.
-
-    Notes:
-        Any additional notes or considerations about the function.
+        frame			(Numpy Array) 	: 
+	
+©cil4sys
 """ 
+import 	cv2
+from 	skimage.filters import threshold_otsu
 
 def motion_detection(background,frame,min_cnt_area,max_cnt_area):
 	if frame is not None:
@@ -40,4 +33,5 @@ def motion_detection(background,frame,min_cnt_area,max_cnt_area):
 			if contour_area < max_cnt_area and contour_area > min_cnt_area :
 				(x,y,w,h) = cv2.boundingRect(contour)
 				cv2.rectangle(frame,(x,y),(x+w,y+h),(0,255,0), 2)
+
 	return frame

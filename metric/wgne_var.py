@@ -1,9 +1,7 @@
 """ 
-
 wgne_var.py 
 
-
-Estimation of white Gaussian noise variance
+Estimation of white Gaussian noise variance.
  
 The module assume that the noise modelis additive white
 Gaussian 

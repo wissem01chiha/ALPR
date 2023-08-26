@@ -1,16 +1,19 @@
 #!/bin/bash
 
-echo "installing LPDR software on raspberrypi..."
+
+echo " uinsatlling previous version of cil4sys package ..."
+
+pip uninstall cil4sys
+##
+echo "updating system ..."
 
 sudo apt get update
 sudo apt upgrade 
+##
+echo "installing and updating Required lib ... "
 
-pip install --upgrade pip setuptools wheel
-sudo apt install libatlas-base-dev gfortran
-sudo apt install python3-opencv libopencv-dev
-
-# Package the code into a single standlone executable
-sudo pip install pyinstaller
+sudo pip3 install --upgrade RPi.GPIO
+sudo pip3 install--upgrade  RPLCD
 
 
 

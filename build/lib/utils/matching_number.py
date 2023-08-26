@@ -9,7 +9,7 @@ and serie number
 Input:
         list of strings contains numeric chars
 
-Return:
+Returns:
             regist_num_detection    (bool):
             serie_num_detection     (bool):
             possible_serie_num      (int) : 
@@ -17,8 +17,7 @@ Return:
     
 Note:
         Default return is False, False , 0 , 0
-
-        
+     
 ©cil4sys
 """
 def matching_number(plate_list):

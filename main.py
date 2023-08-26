@@ -38,6 +38,7 @@ import      os
 import      json
 import      cv2
 import      time 
+import      subprocess
 import      numpy as np 
 import      pytesseract
 from        skimage import  filters
@@ -57,12 +58,9 @@ import      metric
 #===================================================================
 start_time=time.time()
 print("[INFO] Configuring Environment ...")
-# execute config.sh with root 
+#utils.lcd_display("Configuring Environment")
 
-#script_path = 'your_script.sh'
-
-# Run the shell script
-#subprocess.run(script_path, shell=True)
+#subprocess.run("config/raspi.sh", shell=True)
 
 if not os.path.exists("data/images/roi_frames"):
     os.makedirs("data/images/roi_frames")
@@ -81,16 +79,16 @@ with open('config/path.json') as json_file:
     path=json.load(json_file)
 
 ##paths##
-VIDEO_PATH                  =   path["video_path"]
-VIDEO_FRAMES_PATH           =   path["frames_path"]
-ROI_FRAMES_PATH             =   path["roi_path"]
+VIDEO_PATH                  = path["video_path"]
+VIDEO_FRAMES_PATH           = path["frames_path"]
+ROI_FRAMES_PATH             = path["roi_path"]
 
 ## vars ###
 COUNTOUR_AREA               = var["COUNTOUR_AREA"]
 MIN_AREA                    = var["MIN_AREA"]
 MIN_WIDTH, MIN_HEIGHT       = var["MIN_WIDTH"], var["MIN_HEIGHT"]
 MIN_RATIO, MAX_RATIO        = var["MIN_RATIO"], var["MAX_RATIO"]
-SSIM_THRESH_RATIO           =var["SSIM_THRESH_RATIO"]
+SSIM_THRESH_RATIO           = var["SSIM_THRESH_RATIO"]
 
 MAX_DIAG_MULTIPLYER         = var["MAX_DIAG_MULTIPLYER"]
 MAX_ANGLE_DIFF              = var["MAX_ANGLE_DIFF"]
@@ -160,9 +158,6 @@ print("[INFO] Filtring and Denoisng Frames ...")
 #===================================================================
 #               FRAME FILTRING AND DENOISING   
 #===================================================================
-# Initialize a dict to store SNR frames values
-snr_roi_dict  =   {}
-b_roi_dict    =   {}
 # loop for ROI frames and delete similiar images based on SNR ratio 
 # Get a list of frame filenames
 roi_frame_files = sorted(os.listdir(ROI_FRAMES_PATH)) 
@@ -179,46 +174,35 @@ for roi_frame_index, roi_frame_id in enumerate(os.listdir(ROI_FRAMES_PATH)):
                 os.remove(os.path.join(ROI_FRAMES_PATH,roi_frame_id))
     # update the background frame 
     roi_background_frame=frame 
-    #------------------------------------------------------------------------
-    # Get The quality indexs  of each ROI image  
-    #------------------------------------------------------------------------
-    # Estimation of noise and black color parmeters in each image 
-    snr_roi_dict[roi_frame_index]=metric.get_snr(frame,8)
-    b_roi_dict[roi_frame_index]=metric.black_ratio(frame)
-
-
+    
 t=time.time()-start_time
 print("[SUCESS] frames filtred and denoised in %d seconds"%t)
 #=========================================================================
-#                       ROI IMAGES SORTING 
+#                       ROI IMAGES SORTING AND ADJUSTEMENT 
 #=========================================================================
+# Initialize a dict to store frames score  values
+score_dict  =   {}
+for roi_frame_index, roi_frame_id in enumerate(os.listdir(ROI_FRAMES_PATH)):
+    #get the current frame 
+    frame=cv2.imread(os.path.join(ROI_FRAMES_PATH,roi_frame_id))
+    # Estimation of noise and black color parmeters in each image : --> calculte weighted score 
+    frame_score= 1.5 *metric.black_ratio(frame) + 0.4 * metric.get_snr(frame,8)
+    score_dict[ roi_frame_id]=frame_score
 
-
-
-
-
-
-
-
-
-
-
-
-
+# Sort the dictionary based on scores values
+sorted_dict = dict(sorted(score_dict.items(), key=lambda item: item[1]))
 t=time.time()-start_time
 print("[INFO] frames sorted in %d seconds"%t)
 print("[INFO] Numerical Character Detection ... ")
 #===================================================================
 #                   SELECT COUNTOURS BY CHAR SIZE     
 #===================================================================
-
-
 #-------------------------------------------------------------------
 #                       Image Segmenation 
 #-------------------------------------------------------------------
-for roi_frame_index, roi_frame_id in enumerate(os.listdir(ROI_FRAMES_PATH)):
+for  roi_frame_id in sorted_dict.keys() :
     #get the current frame 
-    frame=cv2.imread(os.path.join(ROI_FRAMES_PATH,roi_frame_id)).copy() 
+    frame=cv2.imread(os.path.join(ROI_FRAMES_PATH,roi_frame_id)) 
     # Convert to gray scale 
     gray_frame=cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
     # Image Thresholding
@@ -367,8 +351,7 @@ for roi_frame_index, roi_frame_id in enumerate(os.listdir(ROI_FRAMES_PATH)):
                 result_chars += c
         # add the char to the chars plate list 
         plate_chars.append(result_chars)
-    #print(plate_chars)
-   
+
     serie_detected,reg_detected,s,reg=utils.matching_number(plate_chars)
     if(serie_detected and reg_detected):
         print("---------------------------------------------")
@@ -389,11 +372,4 @@ for roi_frame_index, roi_frame_id in enumerate(os.listdir(ROI_FRAMES_PATH)):
 print("[INFO] end program !")
 
 
-
-    
-
-
-
-    
-    
-   
+ 

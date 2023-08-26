@@ -1,5 +1,4 @@
 """
-
 adjust_sat.py 
 
 
@@ -10,7 +9,17 @@ color base transformation.
 
 ©cil4sys
 """
-import numpy as np 
 from .hsi  import *
+
+def adjust_sat(rgb_image, factor):
+    hsi_image=hsi_to_rgb(rgb_image)
+    hsi_image[:, :, 1] *= factor
+    rgb_adjusted=hsi_to_rgb(hsi_image)
+    
+    return rgb_adjusted
+
+
+
+
 
 

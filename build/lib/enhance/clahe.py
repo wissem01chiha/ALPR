@@ -1,18 +1,22 @@
 """
-    Contrast Limited Adaptive Histogram Equalization
-    lipLimit=2.0  tileGridsize=(8.8)
+    clahe.py 
 
-    
-"""
+    Contrast Limited Adaptive Histogram Equalization. 
 
-  
+    Args:
+    -   image           (numpy.ndarry)
+
+    Returns:
+    -   clahe_img       (numpy.ndarry)
+
+©cil4sys  
+""" 
 import cv2
 
-def clahe(IMAGE,CLIP_LIMIT,TITLE_GRID_SIZE):
-    
-    assert IMAGE is not None, "file could not be read, check with os.path.exists()"
-    gray_image = cv2.cvtColor(IMAGE, cv2.COLOR_BGR2GRAY)
-    clahe = cv2.createCLAHE(clipLimit=CLIP_LIMIT, tileGridSize=TITLE_GRID_SIZE)
+def clahe(image,clip_limit,title_grid_size):
+    assert image is not None, "file could not be read, check with os.path.exists()"
+    gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    clahe = cv2.createCLAHE(clipLimit=clip_limit, tileGridSize=title_grid_size)
     clahe_img = clahe.apply(gray_image)
    
     return  clahe_img

@@ -6,6 +6,8 @@
     
     Args:
     -   input_image     (numpy.ndarry)
+    -   kernel_size     (tuple)
+    -   value 
 
     Returns:
     -   sharpened       (numpy.ndarry)

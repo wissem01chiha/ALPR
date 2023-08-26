@@ -13,21 +13,20 @@
     - bool       : roi_exsit 
     - ditionnary : filtred countours 
 
-    ©cil4sys
-    """
+©cil4sys
+"""
  
-
-def countour_select(COUNTOUR_LIST,MIN_AREA,MIN_RATIO,MAX_RATIO):
+def countour_select(countour_list,min_area,min_ratio,max_ratio):
     # filtre countours based on area 
     # suppose the frame has a ROI
     roi_exist=True
     # init filtred countours list of dicts
     filtred_countours=[]
-    for i in range(len(COUNTOUR_LIST)):
-        d=COUNTOUR_LIST[i]
+    for i in range(len(countour_list)):
+        d=countour_list[i]
         area=d['w']*d['h']
         ratio = d['w'] / d['h']
-        if  area > MIN_AREA and MIN_RATIO < ratio < MAX_RATIO:
+        if  area > min_area and min_ratio < ratio < max_ratio:
             filtred_countours.append(d)
     if len(filtred_countours) == 0:
         roi_exist=False

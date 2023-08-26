@@ -1,18 +1,22 @@
-
 """
-find_chars.py
+    find_chars.py 
 
+    Function that gets possible coutours containing
+    specific  arrangement of rectangular countours. 
 
-Params:
+    Args:
+    -   countour_list           (List) 
+    -   MAX_DIAG_MULTIPLYER     (float)
+        MAX_ANGLE_DIFF          (float)
+        MAX_AREA_DIFF           (float)
+        MAX_WIDTH_DIFF          (float)
+        MAX_HEIGHT_DIFF         (float)
+        MIN_N_MATCHED           (float)
 
+    Returns:
+    -   matched_result_idx     (list)
 
-Return:
-
-
-
-Notes:
-
-
+©cil4sys  
 """
 
 import numpy as np 

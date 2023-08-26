@@ -1,14 +1,22 @@
-import cv2
 """
-    takes a numpy nadrry image format and detect rectangular shapes into
-    return the rectangular into  a dictionnary 
+    rectangle_detection.py 
 
-"""
-
-
-def rectangle_detection(IMAGE):
+    takes a numpy nadrry image format and detect 
+    rectangular shapes into.
     
-    image = cv2.cvtColor(IMAGE, cv2.COLOR_BGR2GRAY)
+    Args:
+    -   countour_list   (List) 
+    -   image           (numpy.ndarry)
+
+    Returns:
+    -   rectangles     (dict)
+
+©cil4sys  
+"""
+import cv2
+
+def rectangle_detection(image):
+    image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     # init list of dicts for image rectangles
     rectangles=[]
     cnts, _ = cv2.findContours(image, cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_SIMPLE)

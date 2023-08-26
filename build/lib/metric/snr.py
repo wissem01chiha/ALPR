@@ -14,15 +14,12 @@ Notes:
     
 ©cil4sys
 """
-
 import numpy as np
-
-from numba import jit
-
-@jit(nopython=True)
-def get_snr(image):
+from .wgne_var import *
+ 
+def get_snr(image,block_size):
     mean= np.mean(image)
-    std_dev=np.std(image)
-    snr_ratio=mean/std_dev
+    _,std_dev=wgne_var(image,block_size)
+    snr_ratio=np.float64(mean/std_dev)
     
     return  snr_ratio

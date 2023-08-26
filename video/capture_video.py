@@ -1,4 +1,8 @@
 """
+capture_video.py
+
+    function that uses the default raspi camera to get
+    video records and store them locally.
 
 
 
@@ -6,15 +10,13 @@
 
 
 
-
-
-
+©cil4sys
 """
 
 import time 
 import cv2
 
-def capture_video(DURATION,FPS,RESOLUTION, OUTPUT_PATH):
+def capture_video(duration,fps,resolution, output_path):
 
     try:
         # Open the USB webcam
@@ -24,9 +26,10 @@ def capture_video(DURATION,FPS,RESOLUTION, OUTPUT_PATH):
             return False
         # Define the codec and create a VideoWriter object
         fourcc = cv2.VideoWriter_fourcc(*'XVID')
-        out = cv2.VideoWriter(OUTPUT_PATH, fourcc, FPS, RESOLUTION)  # Adjust resolution and FPS as needed
+        # Adjust resolution and FPS as needed
+        out = cv2.VideoWriter(output_path, fourcc, fps, resolution)  
         start_time = time.time()
-        while time.time() - start_time < DURATION:
+        while time.time() - start_time < duration:
             ret, frame = cap.read()
             if not ret:
                 print("Error: Could not read frame from camera.")

@@ -1,5 +1,5 @@
 """
-    binarisation.py
+binarisation.py
 
     function that threshold the image based on a specific rgb
     range color.
@@ -13,8 +13,8 @@
     Notes:
         The actual version use the Green  as a thresh color.
 
-    ©cil4sys
-    """
+©cil4sys
+"""
 import cv2
 import numpy as np 
 

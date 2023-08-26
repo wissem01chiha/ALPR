@@ -1,5 +1,5 @@
 """
-hsi.py
+rgb_to_hsi.py
 
 
 HSI Image transformation 
@@ -16,11 +16,9 @@ Returns:
 
 ©cil4sys
 """
- 
 import numpy as np 
 
- 
-def hsi(rgb_image):
+def rgb_to_hsi(rgb_image):
     # Normalize the RGB values to the range [0, 1]
     r, g, b = rgb_image[:, :, 0] / 255.0, rgb_image[:, :, 1] / 255.0, rgb_image[:, :, 2] / 255.0
     # Calculate the Intensity (I)
@@ -35,3 +33,31 @@ def hsi(rgb_image):
     # Stack the HSI channels and return the HSI image
     hsi_image = np.stack((hue, saturation, intensity), axis=-1)
     return hsi_image
+
+"""
+hsi_to_rgb.py 
+
+HSI inverse transofrmation function 
+
+Args:
+    - hsi_img (numpy.ndarry)
+Retruns:
+    - rgb_img (numpy.ndarry)
+
+©cil4sys
+"""
+
+def hsi_to_rgb(hsi_img):
+    h, s, i = hsi_img[:, :, 0], hsi_img[:, :, 1], hsi_img[:, :, 2]
+    
+    x = s * np.cos(h)
+    y = s * np.sin(h)
+    
+    r = i + 2 * x - y
+    g = i + x + y
+    b = i - (x + y)
+    
+    rgb_img = np.stack((r, g, b), axis=-1)
+    # Clip values to the range [0, 1]
+    rgb_img = np.clip(rgb_img, 0, 1) 
+    return rgb_img

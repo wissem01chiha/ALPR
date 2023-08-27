@@ -92,7 +92,7 @@ chihawissem08@gmail.com
 
 ### Acknowledgments
 
-<img src="doc/cil4sys_logo.png" alt="Local Image" width="150" height="100">
+<img src="doc/cil4sys_logo.png" alt="Local Image" width="210" height="100">
 
 
 

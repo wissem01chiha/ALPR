@@ -81,9 +81,6 @@ after installation navigate to the main script diractory folder and run
  
 ### Documentation 
 
-<img src="doc/wiring.png" alt="Local Image" width="350" height="400">
-
- 
 
 
 ### Contributing 

@@ -1,14 +1,4 @@
-##  Car Licencing Plate Detection and Recognition  Embedded Software for Intelligent Parking Systems.
-
-![OpenCV](https://img.shields.io/badge/opencv-%23white.svg?style=for-the-badge&logo=opencv&logoColor=white)
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-![Shell Script](https://img.shields.io/badge/shell_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white)
-![json](https://img.shields.io/badge/json-5E5C5C?style=for-the-badge&logo=json&logoColor=white )
-![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)
-![numba](https://img.shields.io/badge/Numba-00A3E0?style=for-the-badge&logo=Numba&logoColor=white)
-![SciPy](https://img.shields.io/badge/SciPy-%230C55A5.svg?style=for-the-badge&logo=scipy&logoColor=%white)
-![Raspberrypi](https://img.shields.io/badge/Raspberry%20Pi-A22846?style=for-the-badge&logo=Raspberry%20Pi&logoColor=white)
-
+##  Car Licencing Plate Detection and Recognition  Project for Intelligent Parking Systems.
 
 
 ### Table of Contents
@@ -22,8 +12,7 @@
   - [Documentation](#documentation)
   - [Contributing](##contributing)
   - [License](#license)
-  - [Contact](#contact)
-  - [Acknowledgments](#acknowledgments)
+
 
 ### Description 
 LPDR (License Plate Detection and Registration) is an automated application designed to identify and register car license plates within parking areas.  
@@ -41,7 +30,7 @@ Tunisian license plate numbers. However, it's important to note that the current
 
 ###  Installation
 
-#### installation on Raspberry pi Board 
+#### Installation on Raspberry pi Board 
 
 Update package information and upgrade installed packages
 
@@ -66,33 +55,30 @@ Navigate to the repository  folder and run
 
 This will install the application with it dependencies and data files.  
 
-To check that all software modules are installed : 
-
-
-
-
+ 
 ### Usage
 
 connect your camera to raspberry pi board throgh the USB port or the default raspi port , only one camera wich is ste to default will be detected  for the raspi kit camera you miust enable the camera interface 
 
-after installation navigate to the main script diractory folder and run 
+after installation navigate to the main script diractory folder and run :
 
     python main.py 
  
 ### Documentation 
 
+Please find all project documentation at : 
+
+https://www.academia.edu/107295106/Automated_Vehicle_License_Plate_Detection_and_Recognition_Embedded_System
 
 
 ### Contributing 
-
+Please feel free to mail to:  
+- chihawissem08@gmail.com  
+- wissem.chiha@ept.ucar.tn 
 ### License
-This project is actually under The GNU licence,   
-### Contact
-chihawissem08@gmail.com  
+This project is actually under The GNU licence.   
 
-### Acknowledgments
 
-<img src="doc/cil4sys_logo.png" alt="Local Image" width="210" height="100">
 
 
 

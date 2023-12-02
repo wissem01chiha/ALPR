@@ -1,7 +1,6 @@
 """
 rgb_to_hsi.py
 
-
 HSI Image transformation 
 
 The HSI color space separates an image into three
@@ -14,7 +13,7 @@ Args:
 Returns:
     - hsi_image 
 
-©cil4sys
+©Cil4Sys
 """
 import numpy as np 
 

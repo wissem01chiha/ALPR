@@ -1,13 +1,10 @@
 """
 adjust_sat.py 
 
-
 saturation image adjustement using HSI
 color base transformation.
 
-
-
-©cil4sys
+©Cil4Sys
 """
 from .hsi  import *
 

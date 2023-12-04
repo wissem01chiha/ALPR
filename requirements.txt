@@ -1,0 +1,12 @@
+multiprocess==0.70.15
+numba==0.57.1
+numpy==1.23.5
+opencv_contrib_python==4.8.0.74
+opencv_python==4.5.5.62
+opencv_python_headless==4.8.0.74
+Pillow==10.0.0
+pytesseract==0.3.10
+scipy==1.8.1
+setuptools==68.1.2
+setuptools==65.5.0
+skimage==0.0

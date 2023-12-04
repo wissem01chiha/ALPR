@@ -3,7 +3,7 @@
 
 ### Table of Contents
 
-- [LPDR Embedded Software](#project-name)
+- [ALPDR Package](#project-name)
   - [Table of Contents](#table-of-contents)
   - [Description](#description)
   - [Features](#features)
@@ -15,7 +15,7 @@
 
 
 ### Description 
-LPDR (License Plate Detection and Registration) is an automated application designed to identify and register car license plates within parking areas.  
+ALPR (Automated License Plate Detection and Registration) is an automated application designed to identify and register car license plates within parking areas.  
 
  The primary function of LPDR involves the detection of license plates, which are subsequently recorded for billing purposes.  
 This application employs a multi-stage approach, utilizing both video and image processing techniques, to accurately extract 
@@ -62,7 +62,7 @@ connect your camera to raspberry pi board throgh the USB port or the default ras
 
 after installation navigate to the main script diractory folder and run :
 
-    python main.py 
+    python3 main.py 
  
 ### Documentation 
 
@@ -76,7 +76,7 @@ Please feel free to mail to:
 - chihawissem08@gmail.com  
 - wissem.chiha@ept.ucar.tn 
 ### License
-This project is actually under The GNU licence.   
+This project is actually under The GNU licence.See the license file for more details.    
 
 
 

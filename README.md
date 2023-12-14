@@ -47,11 +47,11 @@ Install library dependencies
 
 clone to the repository 
 
-    git clone https://github.com/wissem01chiha/cil4sys
+    git clone git@github.com:wissem01chiha/ALPR-Cil4Sys-Engineering.git
 
 Navigate to the repository  folder and run 
 
-    pip3  install ./dist/cil4sys-0.1.tar.gz
+    pip3  install ./dist/cil4sys-0.1.1.tar.gz
 
 This will install the application with it dependencies and data files.  
 

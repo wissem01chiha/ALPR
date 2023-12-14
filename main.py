@@ -108,7 +108,7 @@ MAX_PLATE_RATIO             = var["MAX_PLATE_RATIO"]
 #===================================================================
 print("[INFO] Starting Video Processing")
 print("[INFO] Capturing video ...")
-#CAPTURE_SUCESS=video.capture_video(10,5,(480,640),video_path)
+CAPTURE_SUCESS=video.capture_video(10,5,(480,640),video_path)
 t=time.time()-start_time
 print("[SUCESS] video captured in %d seconds" % t )
 read_success, frames_nb , read_time=video.read_video(VIDEO_PATH)

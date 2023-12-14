@@ -1,3 +1,4 @@
+LICENCE
 MANIFEST.in
 README.md
 main.py
@@ -21,7 +22,6 @@ data/__init__.py
 data/videos/vid00.mp4
 doc/cil4sys_logo.png
 doc/raspberry-pi-3-b+.pdf
-doc/wiring.png
 enhance/__init__.py
 enhance/clahe.py
 enhance/sharpen.py

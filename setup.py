@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="cil4sys",
-    version="0.1",
+    version="0.1.1",
     author="Wissem Chiha",
     author_email="chihawissem@gmail.com",
     description="LPDR package",

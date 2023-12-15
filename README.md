@@ -28,8 +28,19 @@ Tunisian license plate numbers. However, it's important to note that the current
 
 
 
-###  Installation
+###  Build and Installation
+#### Build 
+To build the package using python setuptools run :  
 
+    python setup.py sdist --dist-dir build
+
+It will generate a distributable version under the build/ directory. 
+
+or with :
+
+    python -m build 
+
+to get a *.tar.gz and *.whl files under the  dist/ diractory. 
 #### Installation on Raspberry pi Board 
 
 Update package information and upgrade installed packages
@@ -39,7 +50,7 @@ Update package information and upgrade installed packages
 
 Upgrade Python packages: pip, setuptools, and wheel
 
-        pip install --upgrade pip setuptools wheel
+    pip install --upgrade pip setuptools wheel
 
 Install library dependencies 
 

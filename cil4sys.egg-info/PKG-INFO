@@ -69,7 +69,7 @@ clone to the repository
 
 Navigate to the repository  folder and run 
 
-    pip3  install ./dist/cil4sys-0.1.01.tar.gz
+    pip3  install ./dist/cil4sys-0.1.1.tar.gz
 
 This will install the application with it dependencies and data files.  
 

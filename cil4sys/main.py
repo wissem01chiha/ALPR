@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 # main_module.py
 ####################################################################
 #                                                                  #
@@ -45,7 +47,7 @@ import      pytesseract
 from        skimage import  filters
 from        PIL  import Image
  
-#from cil4sys import run_cil4sys
+
 from cil4sys import transform 
 from cil4sys import utils
 from cil4sys import enhance
@@ -54,7 +56,18 @@ from cil4sys import video
 from cil4sys import countour 
 from cil4sys import metric 
 
+import pkg_resources
+  #===================================================================
+  #           SET ABSOLUTE PATH FOR CIL4SYS  
+  #===================================================================
+def load_config(config_file):
+    # Load the configuration file using pkg_resources
+    config_data = pkg_resources.resource_string(__name__, f'config/{config_file}')
+    config = json.loads(config_data)
+    return config
+
 def main(video_path=None):
+  print("Inside main function")
   #===================================================================
   #           STARTING BASIC CONFIGURATION PROCESSUS  
   #===================================================================
@@ -74,20 +87,20 @@ def main(video_path=None):
   #               Read Global Script Vars  
   #-------------------------------------------------------------------
   print("[INFO] Reading Variable Files ...")
-  print(os.getcwd())
-  with open('config/var.json') as json_file:
-      var = json.load(json_file)
-  with open('config/path.json') as json_file:
-      path=json.load(json_file)
+  # Load var.json
+  var = load_config('var.json')
+  # Load path.json
+  path = load_config('path.json')
   
   ##paths##
   if video_path:
-      video_path              = video_path
+      #video_path              = video_path
       print(f"[INFO] Running with recorded video: {video_path}")
   else:
        print("[INFO] Running with live camera")
-      
-  VIDEO_PATH                  = path["video_path"]
+       
+  VIDEO_PATH = os.path.join(path["video_path"], video_path) if video_path else path["video_path"]
+  #VIDEO_PATH                  = path["video_path"]
   VIDEO_FRAMES_PATH           = path["frames_path"]
   ROI_FRAMES_PATH             = path["roi_path"]
   
@@ -116,17 +129,24 @@ def main(video_path=None):
   #===================================================================
   print("[INFO] Starting Video Processing")
   print("[INFO] Capturing video ...")
-  CAPTURE_SUCESS=video.capture_video(10,5,(480,640),video_path)
-  t=time.time()-start_time
-  print("[SUCESS] video captured in %d seconds" % t )
-  read_success, frames_nb , read_time=video.read_video(VIDEO_PATH)
-  print("[INFO] Generating Frames ...")
-  if(read_success):
-      split_time=video.video_split(VIDEO_PATH,VIDEO_FRAMES_PATH,10)
+  CAPTURE_SUCCESS=video.capture_video(10,5,(480,640),video_path)
+  if CAPTURE_SUCCESS:
+      t = time.time() - start_time
+      print("[SUCCESS] Video captured in %d seconds" % t)
+      
+      read_success, frames_nb, read_time = video.read_video(VIDEO_PATH)
+      
+      print("[INFO] Generating Frames ...")
+      
+      if read_success:
+          split_time = video.video_split(VIDEO_PATH, VIDEO_FRAMES_PATH, 10)
   
-  t=time.time()-start_time
-  print("[SUCESS] %d frames generated in %d seconds"%(frames_nb,t))
-  print("[INFO] Preprocessing Frames ...")
+      t = time.time() - start_time
+      print("[SUCCESS] %d frames generated in %d seconds" % (frames_nb, t))
+      print("[INFO] Preprocessing Frames ...")
+  else:
+      print("[ERROR] Video capture failed. Check the camera or use the default sample video.")
+
   #===================================================================
   #               PREPROCESSING VIDEO FRAMES  
   #===================================================================
@@ -385,6 +405,7 @@ def main(video_path=None):
           print("[INFO] Time Remaining:%d"%  t)
      
   print("[INFO] end program !")
+  pass
 
 
 

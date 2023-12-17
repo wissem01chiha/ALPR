@@ -1,2 +1,2 @@
 [console_scripts]
-run_cil4sys = cil4sys.run_cil4sys:main
+run_cil4sys = cil4sys.run_cil4sys:main_cli

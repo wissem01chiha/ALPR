@@ -2,6 +2,7 @@ LICENCE
 MANIFEST.in
 README.md
 main.py
+pyproject.toml
 setup.py
 cil4sys/__init__.py
 cil4sys/main.py
@@ -12,12 +13,17 @@ cil4sys.egg-info/entry_points.txt
 cil4sys.egg-info/requires.txt
 cil4sys.egg-info/top_level.txt
 cil4sys/config/__init__.py
+cil4sys/config/path.json
+cil4sys/config/raspi.sh
+cil4sys/config/spec.json
+cil4sys/config/var.json
 cil4sys/countour/__init__.py
 cil4sys/countour/countour_select.py
 cil4sys/countour/crop_roi.py
 cil4sys/countour/find_chars.py
 cil4sys/countour/rectangle_detection.py
 cil4sys/data/__init__.py
+cil4sys/data/videos/vid00.mp4
 cil4sys/enhance/__init__.py
 cil4sys/enhance/clahe.py
 cil4sys/enhance/sharpen.py

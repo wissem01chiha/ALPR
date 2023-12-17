@@ -14,25 +14,29 @@ import      time
 import      os 
 import      cv2
 import      multiprocess
+import      pkg_resources
 
 
 def read_video(VIDEO_PATH):
-     
+
     success=1
-    # Open the video file  
+    # Open the video file
     cap = cv2.VideoCapture(VIDEO_PATH)
     # Check if the video file was opened successfully
     if not cap.isOpened():
         success=0
     else:
-    # Get the total number of frames in the video
+        
+        # Get the total number of frames in the video
         frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
-    exec_time=time.time() 
+        
+    exec_time=time.time()
 
     return success , frames  , exec_time
 
 
 def video_split(VIDEO_PATH,FRAMES_OUTPUT_PATH,FPS):
+  
     start_time = time.time()
     vidCap = cv2.VideoCapture(VIDEO_PATH)
     i=0

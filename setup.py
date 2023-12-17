@@ -1,3 +1,4 @@
+# setup.py
 import setuptools
 
 with open("README.md", "r") as fh:
@@ -13,7 +14,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/wissem01chiha/cil4sys",
     packages=setuptools.find_packages(),
-    package_data={'config': ['*.json','*.sh'],'data':['videos/*.mp4']},
+    package_data={'cil4sys': ['config/*.json', 'config/*.sh', 'data/videos/*.mp4']},
     py_modules=["main"],
     install_requires=[
         "multiprocess==0.70.15",
@@ -27,7 +28,7 @@ setuptools.setup(
     ],
     entry_points={
         'console_scripts': [
-            'run_cil4sys = cil4sys.run_cil4sys:main',
+            'run_cil4sys = cil4sys.run_cil4sys:main_cli',
         ],
     },
     

@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: cil4sys
-Version: 0.1.1
+Version: 0.1.2
 Summary: LPDR package
 Home-page: https://github.com/wissem01chiha/cil4sys
 Author: Wissem Chiha
@@ -9,10 +9,10 @@ Description-Content-Type: text/markdown
 License-File: LICENCE
 Requires-Dist: multiprocess==0.70.15
 Requires-Dist: numpy==1.23.5
-Requires-Dist: opencv_python==4.5.5.62
+Requires-Dist: opencv_python==4.6.0.66
 Requires-Dist: Pillow==10.0.0
 Requires-Dist: pytesseract==0.3.10
-Requires-Dist: scipy==1.6.0
+Requires-Dist: scipy==1.8.1
 Requires-Dist: setuptools==68.1.2
 Requires-Dist: scikit-image==0.18.1
 
@@ -46,8 +46,19 @@ Tunisian license plate numbers. However, it's important to note that the current
 
 
 
-###  Installation
+###  Build and Installation
+#### Build 
+To build the package using python setuptools run :  
 
+    python setup.py sdist --dist-dir build
+
+It will generate a distributable version under the build/ directory. 
+
+or with :
+
+    python -m build 
+
+to get a *.tar.gz and *.whl files under the  dist/ diractory. 
 #### Installation on Raspberry pi Board 
 
 Update package information and upgrade installed packages
@@ -57,7 +68,7 @@ Update package information and upgrade installed packages
 
 Upgrade Python packages: pip, setuptools, and wheel
 
-        pip install --upgrade pip setuptools wheel
+    pip install --upgrade pip setuptools wheel
 
 Install library dependencies 
 

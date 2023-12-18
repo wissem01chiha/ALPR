@@ -1,0 +1,36 @@
+CHANGES 0.1.2 (2023-12-14)
+-----------------
++ upgrade opencv-python to 4.6.0.66: ultralytics 8.0.222 requires opencv-python>=4.6.0
++ upgrade scipy to 1.8.1: issue with Ubuntu: undefined symbol: _PyGen_Send
+
+
+
+
+TODO
+----
++ Function Decomposition:
+  - Break down the main function into smaller functions to improve readability and maintainability. Each function should have a specific responsibility.
+
++ Logging: 
+  - Instead of using print statements for informational messages, consider using Python's logging module. It provides more control over log messages.
+
+
++ Limit saving frames if new number plate is detected
+  - Use tracking system to detect motion
+  - Reduce motion detection to only car
+  - Do not save the save car/plate: skip frames
+
++ Use other ORC that seems to be more efficient
+  - Arabic option: try to capture arabic letters
+  - Use regex for multiple pattern like: standard tunisian plate, RS, Diplomatic...
+  
++ Display video with results
+  - Box for ROI
+  - Plate number
+  - Confidence
+  
++ Extract datetime during saving plate number
+  - Security video cam displays datetime in the upper-right corner of the screen
+  
++ for recorded video:
+  - extract video sequence with only car/motion to improve performance

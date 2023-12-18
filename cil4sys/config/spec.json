@@ -1,0 +1,23 @@
+{
+    "01"    :	"Présidence du gouvernement",
+    "02"    :	"Ministère de l'Intérieur",
+    "03"    :	"Ministère de la Justice",
+    "04"    :	"Ministère des Affaires étrangères",
+    "05"    :	"Ministère de la Défense nationale",
+    "06"    :	"Ministère des Affaires religieuses",
+    "08"	:   "Ministère des Finances",
+    "09"	:   "Ministère de l'Industrie",
+    "11"	:   "Ministère de l'Agriculture, des Ressources hydrauliques et de la Pêche",
+    "12"	:   "Ministère des Domaines de l'État et des Affaires foncières",
+    "13"	:   "Ministère de l'Équipement",
+    "14"    :	"Ministère de l'Environnement",
+    "15"    :	"Ministère du Transport",
+    "16"	:   "Ministère du Tourisme",
+    "17"	:   "Ministère des Technologies de la communication",
+    "18"	:   "Ministère de l'Enseignement supérieur et de la Recherche scientifique et Ministère de l'Éducation",
+    "19"	:   "Ministère de la Culture",
+    "20"	:   "Ministère de la Santé",
+    "21"	:   "Ministère des Affaires sociales",
+    "22"	:   "Ministère de la Formation professionnelle et de l'Emploi",
+    "23"	:   "Ministère de la Jeunesse et des Sports"
+}

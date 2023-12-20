@@ -1,5 +1,5 @@
 {
-   "video_path"               : "data/videos/vid00.mp4",
+   "video_path"               : "cil4sys/data/videos/vid00.mp4",
    "frames_path"              : "data/images/video_frames",
    "roi_path"                 : "data/images/roi_frames"
    

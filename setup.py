@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="cil4sys",
-    version="0.1.2",
+    version="0.1.3",
     author="Wissem Chiha",
     author_email="chihawissem@gmail.com",
     description="LPDR package",
@@ -14,6 +14,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/wissem01chiha/cil4sys",
     packages=setuptools.find_packages(),
+    include_package_data=True,
     package_data={'cil4sys': ['config/*.json', 'config/*.sh', 'data/videos/*.mp4']},
     py_modules=["main"],
     install_requires=[

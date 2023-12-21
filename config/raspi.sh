@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-echo " uinsatlling previous version of cil4sys package ..."
+echo " installing previous version of cil4sys package ..."
 
 pip uninstall cil4sys
 ##

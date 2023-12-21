@@ -1,20 +1,12 @@
 Metadata-Version: 2.1
 Name: cil4sys
-Version: 0.1.2
+Version: 0.1.3
 Summary: LPDR package
 Home-page: https://github.com/wissem01chiha/cil4sys
 Author: Wissem Chiha
 Author-email: chihawissem@gmail.com
 Description-Content-Type: text/markdown
 License-File: LICENCE
-Requires-Dist: multiprocess==0.70.15
-Requires-Dist: numpy==1.23.5
-Requires-Dist: opencv_python==4.6.0.66
-Requires-Dist: Pillow==10.0.0
-Requires-Dist: pytesseract==0.3.10
-Requires-Dist: scipy==1.8.1
-Requires-Dist: setuptools==68.1.2
-Requires-Dist: scikit-image==0.18.1
 
 ##  Car Licencing Plate Detection and Recognition  Project for Intelligent Parking Systems.
 

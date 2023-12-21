@@ -1,7 +1,6 @@
 LICENCE
 MANIFEST.in
 README.md
-main.py
 pyproject.toml
 setup.py
 cil4sys/__init__.py
@@ -36,6 +35,8 @@ cil4sys/run_cil4sys/__init__.py
 cil4sys/run_cil4sys/run_cil4sys.py
 cil4sys/threshold/__init__.py
 cil4sys/threshold/binarisation.py
+cil4sys/track/__init__.py
+cil4sys/track/track.py
 cil4sys/transform/__init__.py
 cil4sys/transform/adjust_sat.py
 cil4sys/transform/hsi.py
@@ -46,6 +47,10 @@ cil4sys/video/__init__.py
 cil4sys/video/capture_video.py
 cil4sys/video/motion_detection.py
 cil4sys/video/video_split.py
+cil4sys/yolo/__init__.py
+cil4sys/yolo/coco.names
+cil4sys/yolo/yolov3-tiny.cfg
+cil4sys/yolo/yolov3-tiny.weights
 config/__init__.py
 config/path.json
 config/raspi.sh

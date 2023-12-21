@@ -6,6 +6,7 @@
     # It imports functions or modules from other files (like main_module.py) to perform specific tasks.
 import argparse
 import os
+import pkg_resources
 from cil4sys import main
 
 
@@ -40,19 +41,22 @@ def parse_args():
 
 def main_cli():
     args = parse_args()
-    print(f"[ARG] {args}")  # Add this line to print the parsed arguments
+    #print(f"[ARG] {args}")  # Add this line to print the parsed arguments
     video_path = args.video_path
 
     # Get the directory of the current script
-    script_directory = os.path.dirname(os.path.abspath(__file__))
+    #script_directory = os.path.dirname(os.path.abspath(__file__))
+    # Get the directory of the installed package
+    #package_directory = os.path.dirname(pkg_resources.resource_filename(__name__, ''))
+    #print(f"package directory:{package_directory}")
 
     # Construct the full video path
-    full_video_path = os.path.join(script_directory, video_path) if video_path else video_path
+    #full_video_path = os.path.join(package_directory, video_path) if video_path else video_path
 
-    print(f"Video Path: {full_video_path}")
+    #print(f"Video Path: {full_video_path}")
 
     # Call the main function from main.py
-    main(video_path=full_video_path)
+    main(video_path=video_path)
     pass
 
 

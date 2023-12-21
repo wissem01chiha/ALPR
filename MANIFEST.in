@@ -4,4 +4,5 @@ recursive-include cil4sys/config *
 include data/videos/*.mp4
 recursive-include cil4sys/data/videos *
 include doc/*
+include cil4sys/yolo/*
 

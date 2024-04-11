@@ -1,15 +1,21 @@
-##  Car Licencing Plate Detection and Recognition  Project for Intelligent Parking Systems.
+<div align="center">
 
+## Car Licensing Plate Detection and Recognition Project for Intelligent Parking Systems
+
+[![Licence](https://img.shields.io/github/license/wissem01chiha/ALPR)](LICENSE)
+![GitHub top language](https://img.shields.io/github/languages/top/wissem01chiha/ALPR)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/t/wissem01chiha/ALPR)
+
+</div>
 
 ### Table of Contents
 
-- [ALPDR Package](#project-name)
+- [ALPR Package](#project-name)
   - [Table of Contents](#table-of-contents)
   - [Description](#description)
   - [Features](#features)
   - [Installation][installation]
   - [Usage](#usage)
-  - [Documentation](#documentation)
   - [Contributing](##contributing)
   - [License](#license)
 
@@ -17,15 +23,14 @@
 ### Description 
 ALPR (Automated License Plate Detection and Registration) is an automated application designed to identify and register car license plates within parking areas.  
 
- The primary function of LPDR involves the detection of license plates, which are subsequently recorded for billing purposes.  
+ The primary function of the application is the detection of license plates, which are subsequently recorded for billing purposes.  
 This application employs a multi-stage approach, utilizing both video and image processing techniques, to accurately extract 
 
 Tunisian license plate numbers. However, it's important to note that the current version of LPDR is limited to recognizing numerical characters on license plates and does not have the capability to read non-numerical characters. 
 ### Features 
 - Processing of video records  from the parking camera
 - License Plate Detection: Utilizes computer vision techniques to accurately locate license plates in various conditions.
-- Optical Character Recognition (OCR): Recognizes alphanumeric characters on license plates, converting visual data to readable text.
-
+- Optical character recognition : Recognizes alphanumeric characters on license plates, converting visual data to readable text.
 
 
 ###  Build and Installation
@@ -58,7 +63,7 @@ Install library dependencies
 
 clone to the repository 
 
-    git clone git@github.com:wissem01chiha/ALPR-Cil4Sys-Engineering.git
+    git clone git@github.com:wissem01chiha/ALPR.git
 
 Navigate to the repository  folder and run 
 
@@ -69,25 +74,27 @@ This will install the application with it dependencies and data files.
  
 ### Usage
 
-connect your camera to raspberry pi board throgh the USB port or the default raspi port , only one camera wich is ste to default will be detected  for the raspi kit camera you miust enable the camera interface 
+connect your camera to raspberry pi board throgh the USB port or the default raspiberry port, only one camera wich is ste to default will be detected  for the raspi kit camera you miust enable the camera interface 
 
 after installation navigate to the main script diractory folder and run :
 
     python3 main.py 
  
-### Documentation 
+### Contributing
+Please see the [contributing](CONTRIBUTING.md) guide.
+ 
+ 
+#### Contributors
 
-Please find all project documentation at : 
+<a href="https://github.com/wissem01chiha/ALPR/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=wissem01chiha/ALPR" />
+</a>
 
-https://www.academia.edu/107295106/Automated_Vehicle_License_Plate_Detection_and_Recognition_Embedded_System
 
-
-### Contributing 
 Please feel free to mail to:  
 - chihawissem08@gmail.com  
-- wissem.chiha@ept.ucar.tn 
 ### License
-This project is actually under The GNU licence.See the license file for more details.    
+This project is actually under The GPL licence. See the [License](LICENCE) file for more details.    
 
 
 

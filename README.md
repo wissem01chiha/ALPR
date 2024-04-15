@@ -1,6 +1,6 @@
 <div align="center">
 
-## Car Licensing Plate Detection and Recognition Project 
+## Automatic License Plate Recognition and Detection Project
 
 [![Licence](https://img.shields.io/github/license/wissem01chiha/ALPR)](LICENSE)
 ![GitHub top language](https://img.shields.io/github/languages/top/wissem01chiha/ALPR)

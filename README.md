@@ -1,6 +1,6 @@
 <div align="center">
 
-## Car Licensing Plate Detection and Recognition Project for Intelligent Parking Systems
+## Car Licensing Plate Detection and Recognition Project 
 
 [![Licence](https://img.shields.io/github/license/wissem01chiha/ALPR)](LICENSE)
 ![GitHub top language](https://img.shields.io/github/languages/top/wissem01chiha/ALPR)
@@ -14,9 +14,9 @@
   - [Table of Contents](#table-of-contents)
   - [Description](#description)
   - [Features](#features)
-  - [Installation][installation]
+  - [Installation](#build)
   - [Usage](#usage)
-  - [Contributing](##contributing)
+  - [Contributing](#contributing)
   - [License](#license)
 
 

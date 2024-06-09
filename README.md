@@ -23,11 +23,9 @@
 
 
 ### Description 
----
 ALPR (Automated License Plate Recognition) is a multistage software application designed for the identification and registration of cars' license plates within parking lots or road areas, in both constrained and unconstrained environments
 
 ### General Notes
----
 - The project was primarily designed to be integrated within an end-to-end real-time embedded IoT application in public parking areas.
 - The package was tested in the development process on [Raspberry-pi-3, Model B+, 2017](cil4sys/doc/raspberry-pi-3-b+.pdf) Before the integration of Yolo v3, you may encounter installation or runtime conflicts. If this happens, please open an issue.
  [issue](https://github.com/wissem01chiha/ALPR/issues)
@@ -39,7 +37,6 @@ ALPR (Automated License Plate Recognition) is a multistage software application 
 ###  Build and Installation
 > **Warning:**  Building OpenCV-lib from source, which is a dependency of the project on Raspberry Pi boards, can fail and consume time. We recommend checking the suitable version of OpenCV for the board and installing the precompiled Python packages for OpenCV listed in the [requirements](requirements.txt)
 
----
 #### Build 
 To build the package using python setuptools run :  
 
@@ -79,7 +76,6 @@ This will install the application with it dependencies and data files.
 
  
 ### Usage
----
 connect your camera to raspberry pi board throgh the USB port or the default raspiberry port, only one camera wich is ste to default will be detected  for the raspi kit camera you miust enable the camera interface 
 
 after installation navigate to the main script diractory folder and run :
@@ -87,7 +83,6 @@ after installation navigate to the main script diractory folder and run :
     python3 main.py 
 
 ### References
---- 
 - **Automated License Plate Recognition: A Survey on Methods and Techniques** *J. Shashirangana et al.* **Applied Sciences**, 2020, IEEE.
 - **A Robust Real-Time Automatic License Plate Recognition Based on the YOLO Detector** *R. Laroca, E. Severo* **arXiv**, 2018, MDPI.
 - **Towards End-to-End Car License Plates Detection and Recognition with Deep Neural Networks** *Hui Li, Peng Wang, and Chunhua Shen* **IEEE**, 2018.
